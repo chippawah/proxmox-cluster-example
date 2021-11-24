@@ -33,20 +33,20 @@ pveum user token add terraform-prov@pve terraform-provisioner --privsep 0
 
 ### Result of the commands:
 
-The last command will output a table similar to the one below. The values used in the provider config should be saved somewhere like Vault to ensure secure access later when managing resources in Proxmox.
+The last command will output a table similar to the one below. It will contain the API token secret value which will be different from the one below. The values returned here should ideally be saved somewhere like Vault to ensure secure access later when managing resources in Proxmox.
 
 name         | value                                    | provider config value
 -------------|------------------------------------------|----------------------
 full-tokenid | terraform-prov@pve!terraform-provisioner | `pm_api_token_id`
 info         | {"privsep":0}                            | _N/A_
-value        | e5d09f8d-3fac-44e7-bcdb-a098ddcfd54a     | `pm_api_token_secret`
+value        | e5d09f8d-XXXX-XXXX-XXXX-a098ddcfd54a     | `pm_api_token_secret`
 
 
 # Installing Terraform
 
 Following the instructions here: https://learn.hashicorp.com/tutorials/terraform/install-cli
 
-Run the following command block to install the Terraform cli tool
+Run the following command block to install the Terraform cli tool on Debian systems.
 
 ```$sh
 sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl ; \
