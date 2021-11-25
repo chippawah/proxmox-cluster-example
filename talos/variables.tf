@@ -77,7 +77,7 @@ variable "config_vlan" {
 variable "config_network_bridge" {
     description = "The name of the network bridge on the Proxmox host that will be used for the configuration network."
     type = string
-    default = "vmbr0"
+    default = "vmbr1"
 }
 
 variable "public_vlan" {
@@ -89,7 +89,7 @@ variable "public_vlan" {
 variable "public_network_bridge" {
     description = "The name of the network bridge on the Proxmox host that will be used for the publicu network."
     type = string
-    default = "vmbr0"
+    default = "vmbr1"
 }
 
 variable "proxmox_api_token_id" {
@@ -110,4 +110,16 @@ variable "proxmox_host_node" {
 variable "proxmox_api_url" {
     description = "The URL for the Proxmox API."
     type = string
+}
+
+variable "proxmox_tls_insecure" {
+    description = "If the TLS connection is insecure (self-signed). This is usually the case."
+    type = bool
+    default = true
+}
+
+variable "proxmox_debug" {
+    description = "If the debug flag should be set when interacting with the Proxmox API."
+    type = bool
+    default = false
 }
