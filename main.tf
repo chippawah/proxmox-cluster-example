@@ -9,3 +9,11 @@ module "talos" {
     worker_node_count = 5
     ceph_mon_disk_storage_pool = "Intel_NVME"
 }
+
+output "control_plane_mac_addrs" {
+    value = module.talos.control_plane_config_mac_addrs
+}
+
+output "worker_mac_addrs" {
+    value = module.talos.worker_node_config_mac_addrs
+}

@@ -18,7 +18,6 @@ variable "proxmox_api_url" {
     type = string
 }
 
-# Setting these here so it can be used in root module .tfvars files.
-# First set is passed down to Talos module.
+# Setting these here so it can be used in root module's .tfvars files.
 variable "ceph_mon_disk_storage_pool" {}
 variable "proxmox_debug" {}
