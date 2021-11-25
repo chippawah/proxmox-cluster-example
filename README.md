@@ -11,7 +11,7 @@ From the Proxmox provider docs: https://registry.terraform.io/providers/Telmate/
 ### Commands:
 
 Run these commands in the Proxmox shell to generate a user for Terraform to use when provisioning resources.
-See the docs above to learn more about creating the user. Basically its the following:
+See the docs above to learn more about creating the user. Ideally this is handled automagically by Ansible. Basically its the following:
 
 - Create a new role, `TerraformProv`, for the future terraform user.
 - Create the user `terraform-prov@pve`
